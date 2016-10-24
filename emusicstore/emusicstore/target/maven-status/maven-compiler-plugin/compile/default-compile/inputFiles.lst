@@ -1,0 +1,11 @@
+H:\sakshi\Workspace\emusicstore\src\main\java\com\emusicstore\model\Users.java
+H:\sakshi\Workspace\emusicstore\src\main\java\com\emusicstore\controller\HomeController.java
+H:\sakshi\Workspace\emusicstore\src\main\java\com\emusicstore\model\Authorities.java
+H:\sakshi\Workspace\emusicstore\src\main\java\com\emusicstore\model\BillingAddress.java
+H:\sakshi\Workspace\emusicstore\src\main\java\com\emusicstore\model\ShippingAddress.java
+H:\sakshi\Workspace\emusicstore\src\main\java\com\emusicstore\dao\impl\CustomerDAOimpl.java
+H:\sakshi\Workspace\emusicstore\src\main\java\com\emusicstore\controller\RegisterController.java
+H:\sakshi\Workspace\emusicstore\src\main\java\com\emusicstore\service\CustomerService.java
+H:\sakshi\Workspace\emusicstore\src\main\java\com\emusicstore\dao\CustomerDAO.java
+H:\sakshi\Workspace\emusicstore\src\main\java\com\emusicstore\dao\impl\CustomerServiceImpl.java
+H:\sakshi\Workspace\emusicstore\src\main\java\com\emusicstore\model\Customer.java
