@@ -29,10 +29,7 @@
 	<div class="container">
 	
 		<div class="row">
-		<br>
-		<br>
-		<br>
-		<br>
+		
 		
 			<div class="col-lg-12">
 				<label style="font-size: 40px;" class="alert alert-info">All Products</label>
@@ -45,11 +42,6 @@
 		{
 		%>
 		
-		<div class="row">
-		
-		    <Br>
-		    <Br>
-		     <Br>
 		
 		
 		
@@ -60,16 +52,14 @@
 			<div class="col-lg-12">
 				<a href="${pageContext.request.contextPath}/addproducts" class="btn btn-danger">Add Product</a>
 			</div>
-			
-		</div>
+			<br>
+		
 		<%
 		}
 		%>
-		
+		</div>
 		<div class="row">
-		<br>
-		<br>
-		<br>
+		
 		
 			<div class="col-lg-12">
 				<input type="text" placeholder="Enter Search Key" ng-model="search" class="form-control"/>
@@ -87,6 +77,8 @@
 				<br>
 				{{x.ProductCategory}}
 			</div>
+			
+			
 			<div class="col-lg-2">
 			<br>
 			<img src="${pageContext.request.contextPath}/{{x.ProductImagePath}}" class="img img-responsive img-thumbnail"></img>
@@ -115,11 +107,8 @@
 			
 			<div class="col-lg-2">
 				<a href="${pageContext.request.contextPath}/updateproducts/{{x.ProductId}}" class="btn btn-success">Update Products</a>
-				<br>
-				<Br>
-		     <Br>
-					
-			</div>
+				
+		</div>
 			
 			  <%
       

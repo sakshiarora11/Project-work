@@ -13,10 +13,10 @@
 
 </head>
 <body>
+
 <c:import url="/head"/>
 
-
-<br><br><br><br>
+<br>
 
 <div class="container">
 		
@@ -107,7 +107,7 @@
 			<div class="row">
 			
 				<div class="col-lg-12">
-					<br>
+					
 					<input type="submit" value="Add To Cart" class="btn btn-success" />
 				</div>
 			

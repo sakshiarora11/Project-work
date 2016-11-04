@@ -21,7 +21,7 @@
     return {
          
             fetchAllItems: function() {
-                    return $http.post('http://localhost:9002/Outbook/flows/fetchitems/')
+                    return $http.post('http://localhost:9002/outbook/flows/fetchitems/')
                             .then(
                                     function(response){
                                         return response.data;
@@ -59,6 +59,11 @@
 			        }
 			     }
 			 );
+		
+		
+		
+		
+		
 		
 		
 	}]);
