@@ -21,7 +21,7 @@
     return {
          
             fetchAllItems: function() {
-                    return $http.post('http://localhost:9002/Outbook/flows/fetchitems/')
+                    return $http.post('http://localhost:9002/outbook/flows/fetchitems/')
                             .then(
                                     function(response){
                                         return response.data;
@@ -34,7 +34,7 @@
             },
             
             updateAll: function(item){
-                return $http.post('http://localhost:9002/Outbook/flows/updateAddresses/', item)
+                return $http.post('http://localhost:9002/outbook/flows/updateAddresses/', item)
                         .then(
                                 function(response){
                                     return response.data;

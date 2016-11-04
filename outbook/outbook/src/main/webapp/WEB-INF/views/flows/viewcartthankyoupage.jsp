@@ -21,7 +21,7 @@
     return {
          
             clearCart: function() {
-                    return $http.post('http://localhost:9002/Outbook/flows/clearCart/')
+                    return $http.post('http://localhost:9002/outbook/flows/clearCart/')
                             .then(
                                     function(response){
                                         return response.data;

@@ -2,22 +2,17 @@
 <%@page isELIgnored="false"%>
     <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
     
-
 <html lang="en">
 <head>
 
 <c:import url="/head-meta"/>
 
-  
-  
+
 </head>
 <body>
 
 <c:import url="/head"/>
-
-
  <form:form method="post" action="${pageContext.request.contextPath}/AddUserToDB" modelAttribute="User">
-
     <div class="container-wrapper">
     <div class="container">
         <div id="signup-box">
@@ -41,9 +36,7 @@
                     <form:input path="email" type="text" id="email" name="email" class="form-control" />
                     <form:errors path="email" class="text text-danger"/>
                     </div>
-                    
-                    
-                    
+                              
                     <div class="form-group">
                     <label for="username">Username: </label>
                     <form:input path="username" type="text" id="username" name="username" class="form-control" />
@@ -73,10 +66,10 @@
                     <form:textarea path="address" class="form-control"></form:textarea>
                     <form:errors path="address" class="text text-danger"/>
                     </div>
-                    <input type="submit" value="submit" class="btn btn-default">    
-               </form:form> 
-        </div>
+                    <input type="submit" value="submit" class="btn btn-default">               
+               </form:form>              
+        </div>          
     </div>
 </div>   
-              
+       <br><br><br><br>       
            </body>   

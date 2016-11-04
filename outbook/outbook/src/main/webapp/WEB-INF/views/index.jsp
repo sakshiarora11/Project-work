@@ -6,6 +6,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="../../favicon.ico">
+
+<title>My Book Store</title>
+
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+
+
+
 
 <c:import url="/head-meta"/>
 
@@ -40,30 +64,22 @@
     <div class="carousel-inner" role="listbox">
       <div class="item active">
         <img src="${pageContext.request.contextPath}/resources/images/book1.jpg" alt="Chania" width="460" height="345">
-      <div class="carousel-caption">
-          <p class="text-center"><em><h2><strong>Welcome to our bookstore</strong></h2></em></p>
-           </div>
+      
       </div>
 
       <div class="item">
         <img src="${pageContext.request.contextPath}/resources/images/book2.jpg" alt="Chania" width="460" height="345">
-        <div class="carousel-caption">
-          <p class="text-center"><em><h2><strong>Anyone who says they have only one life to live must not know how to read a book</strong></h2></em></p>
-           </div>
+        
       </div>
     
       <div class="item">
         <img src="${pageContext.request.contextPath}/resources/images/book3.jpg" alt="Flower" width="460" height="345">
-        <div class="carousel-caption">
-          <p class="text-center"><em><h2><strong>Books are our friends, our companions. They make us laugh and cry and find meaning in life</strong></h2></em></p>
-           </div>
+        
       </div>
 
       <div class="item">
         <img src="${pageContext.request.contextPath}/resources/images/book4.jpg" alt="Flower" width="460" height="345">
-      <div class="carousel-caption">
-          <p class="text-center"><em><h2><strong>Books are like mirrors: if a fool looks in, you cannot expect a genius to look out</strong></h2></em></p>
-           </div>
+     
       </div>
     </div>
 
@@ -80,8 +96,12 @@
   </div>
 </div>
 <br>
-
-<div class="group">
+                    <div class="container-wrapper">
+                    <div class="container">
+                    <center><h2>Outbook 
+                    </h2>
+                    </center>
+                    <div class="Text12">
                     <label for="text">Outbook has been in the business of helping school, college and university
                      students to find and buy cheap textbooks online since 2012. Thousands of independent booksellers
                      - many of them local bookstores - list their new and used textbooks for sale on our site. There
@@ -92,11 +112,7 @@
                      collection of all books like spiritual,fiction,non-fiction,religious books,story books,history books
                      school books,even for childen fun loving books also...
                     </label>
-                    
-              
-              
-        
-       
+        </div>
         </div>
 </body>
 </html>
