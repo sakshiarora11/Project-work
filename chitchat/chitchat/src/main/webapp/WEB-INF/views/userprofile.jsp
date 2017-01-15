@@ -21,7 +21,7 @@
       return {
 
      fetchAllItems: function() {
-     return $http.post('http://localhost:12216/chitchat/userprofile')
+     return $http.post('http://localhost:12216/chitchat/fetchdata')
      .then(
     function(response){
     return response.data;
