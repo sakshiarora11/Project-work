@@ -1,6 +1,7 @@
 package com.chitchat;
 
 
+import java.security.Principal;
 import java.util.List;
 
 
@@ -34,9 +35,21 @@ public class ChitchatController {
 	}
 	
 	
+	
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView login() {
+		
+		String username = null;
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		if (auth != null && !auth.getName().equals("anonymousUser")) {
+			System.out.println(auth.getName());
+			// System.out.println("User present");
+			username = auth.getName();
+			ModelAndView m = new ModelAndView("userprofile");
+			return m;
+		} 
+		
 		ModelAndView model = new ModelAndView("login");
 		model.addObject("user", new User());
 		return model;
@@ -81,11 +94,20 @@ public class ChitchatController {
 	{
 		return "head-meta";
 	}
-@RequestMapping("/userprofile")
-public String userProfile(){
-	
-	return "userprofile";
-}
+	@RequestMapping("/userprofile")
+	public ModelAndView User(Principal p){
+		
+		if(p!=null){
+			ModelAndView model = new ModelAndView("userprofile");
+			return model;
+		}
+		
+		
+		ModelAndView model = new ModelAndView("login");
+		model.addObject("user", new User());
+		return model;
+		
+	}
 
 }
 	

@@ -54,6 +54,11 @@ public class UserDAOImpl implements UserDAO {
 		return user;
 	}
 
+	public void updateUser(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 	
 
