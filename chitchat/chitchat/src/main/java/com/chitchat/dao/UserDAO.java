@@ -10,6 +10,6 @@ public interface UserDAO {
 	public void updateUser(User user);
 	public User getUserById(int id);
 	public List<User> listUser();
-	public User getUserByEmail(String name);
-	
+	public User getUserByEmail(String email);
+	public List<User> getAllUserExceptMe(String email);
 }

@@ -6,6 +6,7 @@
 
   
 <title>chitchat</title>
+<link rel="shortcut icon" href="resources/images/logomin.png" />
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/references/css/chitchat.css"/>

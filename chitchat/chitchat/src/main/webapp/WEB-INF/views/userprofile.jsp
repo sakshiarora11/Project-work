@@ -65,7 +65,7 @@
 			"$http",
 			"$q",
 			function($http, $q) {
-				var BASE_URL = 'http://localhost:12216/chitchat/';
+				var BASE_URL = 'http://localhost:8081/chitchat/';
 				return {
 					userData : function() {
 						return $http.get(BASE_URL + 'userdata').then(
@@ -296,7 +296,7 @@
 									var file = $scope.currentFile;
 									console.log('file is :');
 									console.dir(file);
-									var uploadUrl =  "http://localhost:12216/chitchat/updateProfilePicture/";
+									var uploadUrl =  "http://localhost:8081/chitchat/updateProfilePicture/";
 									// calling uploadFileToUrl function of $fileUpload
 									var res = $fileUpload
 											.uploadFileToUrl(file,

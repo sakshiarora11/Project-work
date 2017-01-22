@@ -31,9 +31,9 @@ public class UserDAOImpl implements UserDAO {
 		session.delete(id);
 	}
 
-	public void updateUser(int id) {
+	public void updateUser(User user) {
 		Session session = sessionFactory.getCurrentSession();
-		session.update(id);		
+		session.update(user);		
 	}
 
 	public User getUserById(int id) {
@@ -54,9 +54,13 @@ public class UserDAOImpl implements UserDAO {
 		return user;
 	}
 
-	public void updateUser(User user) {
-		// TODO Auto-generated method stub
-		
+	
+
+	public List<User> getAllUserExceptMe(String email) {
+		Session session = sessionFactory.getCurrentSession();
+		List<User> list = session.createQuery("from User where email<>'"+email+"'").getResultList();	
+		return list;
+	
 	}
 
 	
