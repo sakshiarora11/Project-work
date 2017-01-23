@@ -21,7 +21,7 @@
  
  function FriendService($http, $q){
 	 
-	 var BASE_URL = 'http://localhost:8081/chitchat/';
+	 var BASE_URL = '/chitchat/';
 	 var service = {};
 	 
 	 service.viewFriendRequset = viewFriendRequset;
