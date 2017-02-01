@@ -22,7 +22,7 @@
 			access="permitAll or hasRole('USER') or hasRole('ADMIN')" />
 
 		<!-- Override default login and logout pages -->
-		<security:form-login login-page="/login"
+		<security:form-login login-page="/index"
 			username-parameter="username" password-parameter="password"
 			default-target-url="/userprofile" authentication-failure-url="/login?error=1" />
 	<!-- 	<security:logout logout-url="/logout"

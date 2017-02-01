@@ -17,6 +17,15 @@
   	
   </servlet>
   
+  <servlet>
+    <servlet-name>Jersey REST Service</servlet-name>
+    <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+    <init-param>
+        <param-name>com.sun.jersey.config.property.packages</param-name>
+        <param-value>com.talk.imgupload</param-value>
+    </init-param>
+    </servlet>
+  
   	<servlet-mapping>
   		<servlet-name>dispatcher</servlet-name>
   		<url-pattern>/</url-pattern>  	

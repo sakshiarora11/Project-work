@@ -9,12 +9,11 @@
 
 <c:import url="/head-meta"/>
 <style type="text/css">
-#upload_link {
-	text-decoration: none;
+
+.navbar-header{
+margin-top:-57px;
 }
-#upload {
-	display: none
-}
+
 </style>
 </head>
 
@@ -65,7 +64,7 @@
 			"$http",
 			"$q",
 			function($http, $q) {
-				var BASE_URL = 'http://localhost:8081/chitchat/';
+				var BASE_URL = 'http://localhost:12216/chitchat/';
 				return {
 					userData : function() {
 						return $http.get(BASE_URL + 'userdata').then(
@@ -159,8 +158,7 @@
 										Username : $scope.userdetails.username,
 										Phone : $scope.userdetails.phone,
 										City : $scope.userdetails.city,
-										
-										Gender : $scope.userdetails.gender
+									    Gender : $scope.userdetails.gender
 									};
 									console.log($scope.UserData);
 									console.log("in the update user");
@@ -296,7 +294,7 @@
 									var file = $scope.currentFile;
 									console.log('file is :');
 									console.dir(file);
-									var uploadUrl =  "http://localhost:8081/chitchat/updateProfilePicture/";
+									var uploadUrl =  "http://localhost:12216/chitchat/updateProfilePicture/";
 									// calling uploadFileToUrl function of $fileUpload
 									var res = $fileUpload
 											.uploadFileToUrl(file,
@@ -326,25 +324,41 @@
 
 
 <body ng-app="myApp" ng-controller="myCtrl">
-	<header>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><h1><img alt="logo" src="resources/images/10.png" width="40" hight="40">Chitchat</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">About us</a></li>
+      <li><a href="#">Contact us</a></li>
+      
+    </ul>
+	<ul class="nav navbar-nav navbar-right">
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><img ng-src="{{userdetails.Image}}"  class="img-circle pull-right" on-error-src='${pageContext.request.contextPath}/resources/images/user.jpg' width="30" height="30" id="sm_profilepic" /> <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">forum</a></li>
+          <li><a href="#">Friend List</a></li>
+          <li><a href="Logout">Logout</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+
 	<div class="container">
 
-		<h1><img alt="logo" src="resources/images/logomin.png" width="40" hight="40">Talk
-		 <a href="logout" title="logout" class="pull-right"><i class="fa fa-power-off" aria-hidden="true"></i></a>&nbsp
-	<img ng-src="{{userdetails.Image}}"  class="img-circle pull-right" on-error-src='${pageContext.request.contextPath}/resources/images/user.jpg' width="30" height="30" id="sm_profilepic" />
-</h1>
-   		
-	</div>
-	</header>
-
-	<hr />
-
-
-
-	<div class="container">
-
-		<div class="col-md-6 col-md-offset-3">
-			<div class="col-md-6" >
+		<div class="col-md-6">
+			<div class="col-md-6">
 				 <div ng-if="userdetails.gender == 'Male'">
 
 					<img ng-src="{{userdetails.Image}}" width="150" height="150"  id="profilepic"
@@ -369,18 +383,7 @@
 					
 						
 						<button ng-click="DeletePic();" class="btn btn-danger btn-sm" title="delete picture" ng-disabled="picDeleted"><i class="fa fa-trash-o fa-1x" aria-hidden="true"></i></button>
-
-
-					
-
-				</div>
-
-
-
-			</div>
-
-			<div class="col-md-6">
-				<div>
+                	<div>
 					<span style="font-size: xx-large;"> {{userdetails.username}}</span>
 				</div>
 

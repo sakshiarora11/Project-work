@@ -69,16 +69,6 @@ public class RESTUserController {
 
 	}
 
-	@RequestMapping("/deleteuser")
-	public ResponseEntity<List<User>> deleteUser(@RequestBody String inputdata) {
-		System.out.println(inputdata);
-
-		userdao.deleteUser(Integer.parseInt(inputdata));
-
-		List<User> list = userdao.listUser();
-		return new ResponseEntity<List<User>>(list, HttpStatus.OK);
-
-	}
 
 	@RequestMapping("/updateuser")
 	public ResponseEntity<String> updateUser(@RequestBody JSONObject data) {

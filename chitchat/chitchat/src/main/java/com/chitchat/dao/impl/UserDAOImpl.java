@@ -26,9 +26,9 @@ public class UserDAOImpl implements UserDAO {
 		session.save(user);
 	}
 
-	public void deleteUser(int id) {
+	public void deleteUser(User user) {
 		Session session = sessionFactory.getCurrentSession();
-		session.delete(id);
+		session.delete(user);
 	}
 
 	public void updateUser(User user) {
@@ -38,13 +38,13 @@ public class UserDAOImpl implements UserDAO {
 
 	public User getUserById(int id) {
 		Session session = sessionFactory.getCurrentSession();
-		User user = (User)session.createQuery("from User where userId="+id).list();	
+		User user = (User)session.createQuery("from User where userId="+id).getSingleResult();	
 		return user;
 	}
 
 	public List<User> listUser() {
 		Session session = sessionFactory.getCurrentSession();
-		List<User> list = session.createQuery("from User").list();	
+		List<User> list = session.createQuery("from User").getResultList();	
 		return list;
 	}
 

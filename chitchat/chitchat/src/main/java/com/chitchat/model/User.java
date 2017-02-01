@@ -40,7 +40,7 @@ public class User {
 	public long getUserId() {
 		return userId;
 	}
-	public void setUserId(int userId) {
+	public void setUserId(long userId) {
 		this.userId = userId;
 	}
 	public void setUsername(String username) {

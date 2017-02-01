@@ -30,15 +30,15 @@ public class ChitchatController {
 
 	@RequestMapping("/")
 	public ModelAndView def() {
-		ModelAndView model = login();
+		ModelAndView model = index();
 		return model;
 	}
 	
 	
 	
 
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public ModelAndView login() {
+	@RequestMapping(value = "/index", method = RequestMethod.GET)
+	public ModelAndView index() {
 		
 		String username = null;
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();

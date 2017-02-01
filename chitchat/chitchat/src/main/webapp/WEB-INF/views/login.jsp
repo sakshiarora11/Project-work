@@ -4,23 +4,62 @@
     
 
  <%@include file="head-meta.jsp" %>
-
-
+ <style>
+ 
+body{
+     background: url(${pageContext.request.contextPath}/resources/images/12.jpg) no-repeat center center fixed; 
+}
+.container{
+margin-top:-120px;
+}
+.navbar-header{
+margin-top:-57px;
+}
+ </style>
 </head>
 <body>
 
-	<div class="container">
-		<h1>Login</h1>
 
-		<div class="col-md-12" align="right">
-		<a href="aboutus" title="About Us"><i
-					class="fa fa-info-circle fa-2x" aria-hidden="true"></i></a>
-		</div>
-		
-		
-		<div class="col-md-12">
-			<div class="col-md-6">
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><h1><img alt="logo" src="resources/images/10.png" width="40" hight="40">Chitchat</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">About us</a></li>
+      <li><a href="#">Contact us</a></li>
+      
+    </ul>
+	<ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
 
+
+ <div class="col-sm-4">
+ <br>
+ <br>
+ 
+ <h1><em>Welcome</em></h1>
+ <h3><em>to our social network</em></h3>
+ <h3><em>share your memories, connect with others, make new friends.</em></h3>
+ 
+ 
+  
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-7">
+            <div class="panel panel-default">
+                <div class="panel-heading"> <strong class="">Login</strong>
+
+                </div>
+				
+			
+                <div class="panel-body">
+				<div>
 				<c:if test="${param.error != null}">
 					<p class="alert alert-danger">
 						<span><b>TRY AGAIN!</b> Invalid Email or password.</span>
@@ -31,53 +70,61 @@
 						<span>You have been logged out successfully.</span>
 					</p>
 				</c:if>
-
-			</div>
-			<div class="col-md-6" >
-			</div>
-		</div>
-
-
-
-
-		<form action="login" method="post">
-			<div class="col-md-6">
-				<div class="col-md-6" style="margin-bottom: 20px">
-					<div class="input-group">
-						<span class="input-group-addon"><i class="fa fa-user fa-lg"
-							aria-hidden="true"></i></span> <input id="msg" type="text"
-							class="form-control" name="username" placeholder="Enter email">
+				
+				<c:if test="${not empty success}">
+					<p class="alert alert-success">
+						<b>GREAT</b>&nbsp Account Created Successfully
+					</p>
+				</c:if>
+				
+				</div>
+					<form action="login" method="post" class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-3 control-label"><em>Email</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="username" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" id="inputPassword3" name="password" placeholder="Password" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <div class="checkbox">
+                                    <label class="">
+                                        <input type="checkbox" class="">Remember me</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group last">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <button type="submit" class="btn btn-success btn-sm">Sign in</button>
+                                <button type="reset" class="btn btn-default btn-sm">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+       <div class="panel-footer">
+				
+				
+				
+		<button type="button" class="btn btn-default btn-sm"
+			data-toggle="modal" data-target="#myModal">Register</button>
+		<br />
+		
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Register Details</h4>
 					</div>
-
-				</div>
-				<div class="col-md-6" style="margin-bottom: 20px">
-					<div class="input-group">
-						<span class="input-group-addon"><i class="fa fa-lock fa-lg"
-							aria-hidden="true"></i></span> <input type="password"
-							class="form-control" name="password" placeholder="Enter password">
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-6" style="margin-bottom: 20px">
-				<div class="col-md-12">
-					<input type="submit" value="Log In" class="btn btn-primary" />
-				</div>
-
-			</div>
-		</form>
-	</div>
-
-
-	<hr />
-
-
-	<div class="container">
-		<h1>Sign Up</h1>
-		<br>
-		<div class="col-md-6">
-
-			<div>
+					<div class="modal-body">
+					<div>
 				<c:if test="${not empty passwordmismatch}">
 					<p class="alert alert-danger">
 						<b>OOPS!</b>&nbsp Password Does't Match
@@ -90,14 +137,9 @@
 					</p>
 				</c:if>
 
-				<c:if test="${not empty success}">
-					<p class="alert alert-success">
-						<b>GREAT</b>&nbsp Account Created Successfully
-					</p>
-				</c:if>
+				
 			</div>
-
-			<form:form action="adduser" method="post" modelAttribute="user">
+						<form:form action="adduser" method="post" modelAttribute="user">
 
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-user fa-lg"
@@ -166,14 +208,21 @@
 
 			</form:form>
 		</div>
-
-		<div class="col-md-6">
-			<img src="resources/images/image1.jpeg" class="img-responsive"
-				alt="image" />
-		</div>
-
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+		
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container-fluid">
+  
+  <p class="navbar-text"><b>&copy; Sakshi Arora</b></p>
+    
+  </div>
+</nav>
 	</div>
-
-	
 </body>
 </html>
+
+
